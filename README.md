@@ -14,16 +14,16 @@ Based on versions **23.0.1** and **1.4.1** of _firebase-firestore-ktx_ and _kotl
 Lets start by adding a corresponding repository in your _root_ `build.gradle` file.
 ```gradle
 allprojects {
-	repositories {
-		...
-		maven { url 'https://jitpack.io' }
-	}
+    repositories {
+        ..
+        maven { url 'https://jitpack.io' }
+    }
 }
  ```
 The next task is to add the dependency to your _app_ `build.gradle` file.
 ```gradle
 dependencies {
-    ...
+    ..
     implementation 'com.github.horaciocome1:fireflow:0.0.1'
 }
 ```
