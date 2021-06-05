@@ -1,0 +1,3 @@
+rootProject.name = "firestore-flow"
+include ':app'
+include ':fireflow'
