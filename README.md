@@ -24,7 +24,7 @@ The next task is to add the dependency to your _app_ `build.gradle` file.
 ```gradle
 dependencies {
     ..
-    implementation 'com.github.horaciocome1:fireflow:0.0.1'
+    implementation 'com.github.horaciocome1:fireflow:$VERSION'
 }
 ```
 Now you ready to go.  
@@ -47,7 +47,7 @@ ref.addSnapshotListener { snapshot, error ->
 ### with fireflow
 ```kotlin
 val db = FirebaseFirestore.getInstance()
-db.collection("posts").getAsFlow<Post>().collect { posts ->
+db.collection("posts").asFlow<Post>().collect { posts ->
     // set posts to UI
 }
 ```
@@ -55,8 +55,23 @@ You can also read documents as flows
 ```kotlin
 val db = FirebaseFirestore.getInstance()
 db.collection("posts").document("1")
-    .getAsFlow<Post>().collect { post ->
+    .asFlow<Post>().collect { post ->
         // set post to UI
+    }
+```
+You can also serve as livedata (if you are using Jetpack Lifecycle)
+```kotlin
+val db = FirebaseFirestore.getInstance()
+db.collection("posts").document("1")
+    .asFlow<Post>()
+    .asLivedata()
+```
+You can also get the snapshot itself (_"we never know ..."_)
+```kotlin
+val db = FirebaseFirestore.getInstance()
+db.collection("posts").document("1")
+    .snapshotAsFlow().collect { snapshot ->
+        // handle
     }
 ```
 

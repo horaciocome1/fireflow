@@ -2,10 +2,10 @@ package io.github.horaciocome1.firestore_flow
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.Query
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.flow.collect
+//import com.google.firebase.firestore.FirebaseFirestore
+//import com.google.firebase.firestore.Query
+//import kotlinx.coroutines.ExperimentalCoroutinesApi
+//import kotlinx.coroutines.flow.collect
 
 class MainActivity : AppCompatActivity() {
 
