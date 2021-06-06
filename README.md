@@ -1,5 +1,5 @@
 # fireflow
-[![](https://jitpack.io/v/horaciocome1/fireflow.svg)](https://jitpack.io/#horaciocome1/fireflow) . [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)
+[![](https://jitpack.io/v/horaciocome1/fireflow.svg)](https://jitpack.io/#horaciocome1/fireflow) [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)
 
 ## Getting Started
 Android library that aims to hide Firebase Firestore listener implementation and expose only a Kotlin Flow of specified type. ;)  
