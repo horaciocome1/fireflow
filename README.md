@@ -8,7 +8,7 @@ Works for ColletionReferences, Queries, and DocumentReferences.
 ## Pre-requisites
 Check the pre-requisites for Firebase Firestore and for Kotlin Flow on respective documentation.  
 Be familiar with Kotlin Coroutines.  
-Based on versions **23.0.1** and **1.4.1** of _firebase-firestore-ktx_ and _kotlinx-coroutines-play-services_ respectively
+Based on versions **24.0.0** and **1.4.1** of _firebase-firestore-ktx_ and _kotlinx-coroutines-play-services_ respectively
 
 ## Adding to your project
 Lets start by adding a corresponding repository in your _root_ `build.gradle` file.
