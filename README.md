@@ -20,7 +20,7 @@ allprojects {
     }
 }
  ```
-The next task is to add the dependency to your _app_ `build.gradle` file.
+The next task is to add the dependency to your _app_ `build.gradle` file. [![](https://jitpack.io/v/horaciocome1/fireflow.svg)](https://jitpack.io/#horaciocome1/fireflow)
 ```gradle
 dependencies {
     ..
@@ -49,6 +49,13 @@ ref.addSnapshotListener { snapshot, error ->
 val db = FirebaseFirestore.getInstance()
 db.collection("posts").asFlow<Post>().collect { posts ->
     // set posts to UI
+}
+```
+You can also specify a `coroutineContext`. Default is `Dispatchers.IO`.
+```kotlin
+val db = FirebaseFirestore.getInstance()
+db.collection("posts").asFlow<Post>(coroutineContext = Dispatchers.Main).collect { posts ->
+   // set posts to UI
 }
 ```
 You can also read documents as flows
