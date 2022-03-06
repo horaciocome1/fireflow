@@ -32,7 +32,7 @@ import kotlin.coroutines.CoroutineContext
 inline fun <reified T> Query.asFlow(
     coroutineContext: CoroutineContext = Dispatchers.IO,
 ): Flow<MutableList<T>> = snapshotAsFlow(coroutineContext).map {
-    it.toObjects(T::class.java)
+    it?.toObjects(T::class.java) ?: mutableListOf()
 }
 
 /**
@@ -43,5 +43,5 @@ inline fun <reified T> Query.asFlow(
 inline fun <reified T> DocumentReference.asFlow(
     coroutineContext: CoroutineContext = Dispatchers.IO,
 ): Flow<T?> = snapshotAsFlow(coroutineContext).map {
-    it.toObject(T::class.java)
+    it?.toObject(T::class.java)
 }

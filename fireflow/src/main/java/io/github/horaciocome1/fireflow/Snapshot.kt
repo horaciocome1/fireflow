@@ -38,10 +38,10 @@ import kotlin.coroutines.CoroutineContext
 @ExperimentalCoroutinesApi
 fun DocumentReference.snapshotAsFlow(
     coroutineContext: CoroutineContext = Dispatchers.IO,
-): Flow<DocumentSnapshot> = callbackFlow {
+): Flow<DocumentSnapshot?> = callbackFlow {
     try {
         val listener = EventListener<DocumentSnapshot> { snapshot, error ->
-            if (error != null || snapshot == null) {
+            if (error != null) {
                 close(error)
                 return@EventListener
             }
@@ -63,10 +63,10 @@ fun DocumentReference.snapshotAsFlow(
 @ExperimentalCoroutinesApi
 fun Query.snapshotAsFlow(
     coroutineContext: CoroutineContext = Dispatchers.IO,
-): Flow<QuerySnapshot> = callbackFlow {
+): Flow<QuerySnapshot?> = callbackFlow {
     try {
         val listener = EventListener<QuerySnapshot> { snapshot, error ->
-            if (error != null || snapshot == null) {
+            if (error != null) {
                 close(error)
                 return@EventListener
             }
