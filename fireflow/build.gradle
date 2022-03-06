@@ -4,8 +4,8 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'io.github.horaciocome1.fireflow'
-version = '0.0.6-alpha04'
+group = 'com.github.horaciocome1.fireflow'
+version = '0.0.6'
 
 android {
     compileSdkVersion 32
@@ -13,8 +13,8 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 32
-        versionCode 10
-        versionName "0.0.6-alpha04"
+        versionCode 11
+        versionName "0.0.6"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -50,9 +50,9 @@ afterEvaluate {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
                 from components.release
-                groupId = 'io.github.horaciocome1.fireflow'
+                groupId = 'com.github.horaciocome1.fireflow'
                 artifactId = 'fireflow'
-                version = '0.0.6-alpha04'
+                version = '0.0.6'
             }
         }
     }
